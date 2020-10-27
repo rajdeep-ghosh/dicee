@@ -1,4 +1,14 @@
+document.addEventListener("keydown", function (eve) {
+    if(eve.key == "r" || eve.key == "R") {
+        rollDice();
+    }
+});
+
 document.querySelector(".btn").addEventListener("click", function() {
+    rollDice();
+});
+
+function rollDice() {
     var randomVariable1 = Math.floor(Math.random() * 6) + 1;
     var randomVariable2 = Math.floor(Math.random() * 6) + 1;
     var result;
@@ -20,4 +30,4 @@ document.querySelector(".btn").addEventListener("click", function() {
 
     document.querySelector(".img1").setAttribute("src", randomImageSource1);
     document.querySelector(".img2").setAttribute("src", randomImageSource2);
-});
+}
